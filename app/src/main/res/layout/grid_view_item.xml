@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    
+
     <data>
         <variable
-            name="viewModel"
-            type="com.bejussi.marsphotos.overview.OverviewViewModel" />
+            name="photo"
+            type="com.bejussi.marsphotos.network.MarsPhoto" />
     </data>
     
     <ImageView
@@ -17,6 +17,7 @@
         android:adjustViewBounds="true"
         android:padding="2dp"
         tools:src="@tools:sample/backgrounds/scenic"
-        app:imageUrl="@{viewModel.photos.imgSrcUrl}"/>
+        app:imageUrl="@{photo.imgSrcUrl}"
+       />
     
 </layout>
